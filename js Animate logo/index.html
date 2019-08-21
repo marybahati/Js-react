@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Story</title>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<!-- <script type="text/javascript">var loo...</script>
+ -->
+</head>
+<body>
+	<script type="text/javascript">
+		var looper;
+		var degrees=0;
+		function rotateAnimation(el,speed){
+			var elem=document.getElementById(el);
+			if (navigator.userAgent.match("chrome")) {
+				elem.style.WebkitTransform ="rotate("+degrees+"deg)";}
+				else{
+					img1.style.transform="rotate("+degrees+"deg)";
+				}
+				looper =setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+				degrees++;
+				if(degrees > 359){
+					degrees =1;
+				}
+				document.getElementById("status").innerHTML ="rotate("+degrees+"deg)";
+			}
+		
+	</script>
+
+
+
+
+
+
+<img id ="img1" src="img/marian.jpg">
+ <script type="text/javascript">rotateAnimation("img1 ",200);</script>
+ <h2 style="width: 150px;" id="status">This is logo</h2>
+ <script type="text/javascript">rotateAnimation("status",20);</script>
+       
+</body>
+</html>
